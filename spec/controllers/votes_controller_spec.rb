@@ -20,6 +20,11 @@ RSpec.describe VotesController do
       expect(response).to render_template('index')
     end
 
+    it 'assigns @votes' do
+      votes = Vote.all
+      get :index
+      expect(assigns(:votes)).to eq votes
+    end
 
 
   end
