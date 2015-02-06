@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature 'VManaging Votes' do
+RSpec.feature 'Managing Votes' do
   scenario 'List all votes' do
     Vote.create!(issue: 'enviorment', how_vote: true)
 
