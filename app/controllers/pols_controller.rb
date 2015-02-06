@@ -1,6 +1,6 @@
 class PolsController < ApplicationController
   def index
-    @pol = Pol.all
+    @pols = Pol.all
   end
 
   def show

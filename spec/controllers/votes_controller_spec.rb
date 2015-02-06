@@ -25,10 +25,13 @@ RSpec.describe VotesController do
       get :index
       expect(assigns(:votes)).to eq votes
     end
-
-
   end
 
-
-
+  describe 'GET show' do
+    it 'has a 200 status code' do
+      vote = Vote.create!(valid_attributes)
+      get :show, id: vote
+      expect(response.status).to eq 200
+    end
+  end
 end
