@@ -33,5 +33,17 @@ RSpec.describe VotesController do
       get :show, id: vote
       expect(response.status).to eq 200
     end
+
+    it 'renders the show template' do
+      vote = Vote.create!(valid_attributes)
+      get :show, id: vote
+      expect(response).to render_template('show')
+    end
+
+    it 'assigns @vote' do
+      vote = Vote.create!(valid_attributes)
+      get :show, id: vote
+      expect(assigns(:vote)).to eq vote
+    end
   end
 end

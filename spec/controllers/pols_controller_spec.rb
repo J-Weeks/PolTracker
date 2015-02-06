@@ -33,5 +33,18 @@ RSpec.describe PolsController do
       get :show, id: pol
       expect(response.status).to eq 200
     end
+
+    it 'renders the show template' do
+      pol = Pol.create!(valid_attributes)
+      get :show, id: pol
+      expect(response).to render_template('show')
+    end
+
+    it 'assigns @pol' do
+      pol = Pol.create!(valid_attributes)
+      get :show, id: pol
+      expect(assigns(:pol)).to eq pol
+    end
+
   end
 end
