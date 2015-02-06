@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cdistrict: MyString
+  zip: 
+  vote_id: 
+  pol_id: 
+
+two:
+  cdistrict: MyString
+  zip: 
+  vote_id: 
+  pol_id: 
