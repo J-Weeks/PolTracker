@@ -1,15 +1,16 @@
 <h1>Districts</h1>
 <%= form_tag(districts_path, :method => "get", id: "search-form") do %>
 <%= text_field_tag :search, params[:search], placeholder: "Search Zips" %>
-<%= submit_tag "Search" %>
-<% end %>
+<%= submit_tag "Search"  %>
+
 <% if @districts.present? %>
     <% @districts.each do |dis| %>
+    District <%= dis.district.capitalize %>
     <%= dis.zip %>
+    <%= dis.vote_id %>
+    <%= dis.pol_id %>
     <% end %>
   <% else %>
     <p> No Zip Located</p>
 <% end %>
-
-
-
+<% end %>
