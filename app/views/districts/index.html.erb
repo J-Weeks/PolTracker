@@ -4,7 +4,9 @@
 <%= submit_tag "Search" %>
 <% end %>
 <% if @districts.present? %>
-  <%= @districts.zip %>
+    <% @districts.each do |dis| %>
+    <%= dis.zip %>
+    <% end %>
   <% else %>
     <p> No Zip Located</p>
 <% end %>
