@@ -14,8 +14,8 @@
 ActiveRecord::Schema.define(version: 20150206150943) do
 
   create_table "districts", force: :cascade do |t|
-    t.string   "cdistrict"
-    t.integer  "zip"
+    t.string   "district"
+    t.string   "zip"
     t.integer  "vote_id"
     t.integer  "pol_id"
     t.datetime "created_at", null: false
@@ -34,7 +34,16 @@ ActiveRecord::Schema.define(version: 20150206150943) do
 
   create_table "votes", force: :cascade do |t|
     t.string   "issue"
-    t.boolean  "how_vote"
+    t.string   "bill"
+    t.boolean  "how_vote1"
+    t.boolean  "how_vote2"
+    t.boolean  "how_vote3"
+    t.boolean  "how_vote4"
+    t.boolean  "how_vote5"
+    t.boolean  "how_vote6"
+    t.boolean  "how_vote7"
+    t.boolean  "how_vote8"
+    t.boolean  "how_vote9"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
